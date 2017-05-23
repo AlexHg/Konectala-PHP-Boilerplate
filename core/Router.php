@@ -1,5 +1,9 @@
 <?php
-
+    #Controladores desde la ruta
+    Flight::route('/action/@controller', function($controller){
+        Controller::run($controller);
+    });
+    
     Flight::route('/', function(){
         View::render('template/ini', 
             array(
